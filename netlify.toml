@@ -1,0 +1,4 @@
+# Netlify settings for the vintage shop demo (plain static HTML, no build step)
+[build]
+  publish = "vintage-shop-demo"
+  command = ""

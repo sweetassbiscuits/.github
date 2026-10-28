@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop | [SHOP NAME]</title>
+<meta name="description" content="Shop vintage bags, jewelry and clothing by type, era, material and price. One of each.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Fraunces:opsz,wght@9..144,600..800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the good stuff</a>
+<div class="announce">Next drop: Sunday, November 1 at 10am. <a href="index.html#list">The list sees it first.</a></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">[SHOP NAME]<span>.</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="drops.html">How drops work</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">The shop</span>
+    <h1>Everything I've found</h1>
+    <p class="lede">One of each, no restocks. Pieces that found a home stay up so you can see what I hunt for, and you can ask me to watch for another.</p>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px" aria-label="Products">
+  <form class="filters" id="filters" aria-label="Filter the shop">
+    <div class="filter">
+      <label for="f-type">Type</label>
+      <select class="select" id="f-type" name="type"><option value="">All types</option></select>
+    </div>
+    <div class="filter">
+      <label for="f-era">Era</label>
+      <select class="select" id="f-era" name="era"><option value="">All eras</option></select>
+    </div>
+    <div class="filter">
+      <label for="f-material">Material</label>
+      <select class="select" id="f-material" name="material"><option value="">All materials</option></select>
+    </div>
+    <div class="filter">
+      <label for="f-price">Price</label>
+      <select class="select" id="f-price" name="price"><option value="">Any price</option></select>
+    </div>
+    <button class="btn" type="reset">Clear filters</button>
+  </form>
+
+  <div class="result-bar">
+    <p id="result-count" aria-live="polite" style="margin:0"></p>
+    <p style="margin:0">Only 1 of each. First to claim wins.</p>
+  </div>
+
+  <div class="grid" data-grid="shop"></div>
+  <div class="empty" id="empty" hidden>
+    <p>Nothing matches that mix yet. Loosen a filter, or <a href="index.html#list">get on the list</a> and I'll keep hunting.</p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">[SHOP NAME]</a>
+        <p>Vintage bags, jewelry and clothing, one of each, dug out of vintage shops by hand.</p>
+        <div class="social" aria-label="Follow along">
+          <a href="https://www.instagram.com/" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/" rel="noopener">TikTok</a>
+          <a href="https://www.whatnot.com/" rel="noopener">Whatnot</a>
+        </div>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="shop.html?type=bags">Bags</a></li>
+          <li><a href="shop.html?type=jewelry">Jewelry</a></li>
+          <li><a href="shop.html?type=clothing">Clothing</a></li>
+          <li><a href="shop.html">Everything</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>The fine print</h3>
+        <ul>
+          <li><a href="drops.html">How drops work</a></li>
+          <li><a href="about.html#grading">How I grade things</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="index.html#list">Get on the list</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-base">&copy; 2026 [SHOP NAME]. One of everything. When it's gone, it's gone.</p>
+  </div>
+</footer>
+<script src="assets/products.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
