@@ -148,6 +148,16 @@ a { color: inherit; }
 #about p:not(.eyebrow) { color: rgba(248, 241, 231, .82); }
 #about .about-sign { font: italic 500 1.5rem var(--serif); color: var(--gold-2); }
 
+.cellar { position: relative; padding: 3rem 2.5rem; border-radius: 20px; text-align: center; color: var(--cream);
+  background: radial-gradient(ellipse at 50% 0%, rgba(201, 163, 92, .18), transparent 60%), linear-gradient(160deg, #18224a 0%, #070b17 100%);
+  border: 1px solid rgba(201, 163, 92, .45); box-shadow: 0 30px 60px rgba(0, 0, 0, .45), inset 0 0 0 8px rgba(7, 11, 23, .6), inset 0 0 0 9px rgba(201, 163, 92, .3); }
+.cellar-mark { width: 34px; height: 54px; filter: drop-shadow(0 0 14px rgba(226, 194, 126, .4)); }
+.cellar-eyebrow { font: italic 500 1.6rem var(--serif); color: var(--gold-2); margin: .6rem 0 1.4rem; }
+.cellar ul { list-style: none; margin: 0; padding: 0; }
+.cellar li { padding: 1rem 0; border-top: 1px solid rgba(201, 163, 92, .25); }
+.cellar li span { display: block; font: 600 1.55rem var(--serif); letter-spacing: .02em; }
+.cellar li small { color: rgba(248, 241, 231, .6); font-size: .85rem; }
+
 /* Split / club */
 .split { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .perks { padding: 0; list-style: none; margin: 1.5rem 0 2rem; }
