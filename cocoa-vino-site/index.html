@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cocoa Vino · Wine & Chocolate Bar · Capitola Village</title>
+  <meta name="description" content="Rare California wines, rotating vintage champagne and artisan chocolate pairings, steps from Capitola Beach.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top">Cocoa <span>Vino</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="nav-links">
+    <a href="#pours">On the Menu</a>
+    <a href="#events">Events</a>
+    <a href="#club">Wine Club</a>
+    <a href="#visit">Reservations</a>
+    <a href="#visit">Visit</a>
+    <a class="btn btn-small" href="#newsletter">Join the List</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner reveal">
+    <p class="eyebrow">Capitola Village · Steps from the Beach</p>
+    <h1>Where rare wine<br><em>meets chocolate.</em></h1>
+    <p class="lede">Hard-to-find California pours, rotating vintage champagne, and artisan chocolate pairings — served a few steps from the sand.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#events">See What's On</a>
+      <a class="btn btn-ghost" href="#newsletter">Get the Newsletter</a>
+    </div>
+    <p class="open-status" id="open-status" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="ticker" aria-label="Now pouring">
+  <div class="ticker-track" id="ticker"></div>
+</section>
+
+<section id="pours" class="section">
+  <div class="section-head reveal">
+    <p class="eyebrow">On the Menu</p>
+    <h2>Flights, pours & pairings</h2>
+    <p>The list rotates often. Filter by style to see what's pouring this week.</p>
+  </div>
+  <div class="filters" role="tablist" id="filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="red">Reds</button>
+    <button class="chip" data-filter="white">Whites</button>
+    <button class="chip" data-filter="bubbles">Bubbles</button>
+    <button class="chip" data-filter="pairing">Chocolate Pairings</button>
+  </div>
+  <div class="cards" id="menu-cards"></div>
+</section>
+
+<section id="events" class="section section-dark">
+  <div class="section-head reveal">
+    <p class="eyebrow">What's On</p>
+    <h2>Upcoming events</h2>
+    <p>Live music, winemaker nights and pairing classes. Seats go fast — newsletter subscribers hear first.</p>
+  </div>
+  <div class="events" id="event-list"></div>
+</section>
+
+<section id="club" class="section">
+  <div class="split reveal">
+    <div>
+      <p class="eyebrow">Wine Club</p>
+      <h2>Rare bottles, delivered to your glass</h2>
+      <p>Members get first access to allocated wines, quarterly bottle pick-ups with a chocolate pairing, and member pricing on every pour.</p>
+      <ul class="perks">
+        <li>2 or 4 hand-picked bottles each quarter</li>
+        <li>A paired box of artisan chocolate with every pick-up</li>
+        <li>Member-only tastings & release parties</li>
+        <li>15% off bottles and pours</li>
+      </ul>
+      <a class="btn" href="#newsletter">Ask About Membership</a>
+    </div>
+    <div class="club-card" aria-hidden="true">
+      <span class="club-mark">CV</span>
+      <p>Member</p>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter" class="section section-cocoa">
+  <div class="newsletter reveal">
+    <p class="eyebrow">The Pour List</p>
+    <h2>New arrivals, events & pairings — in your inbox</h2>
+    <p>One email a month or so. Early event tickets, new bottles, and the occasional members-only invite.</p>
+    <form id="signup" class="signup" novalidate>
+      <label class="sr-only" for="email">Email address</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+    <label class="consent"><input type="checkbox" name="tag-events" form="signup" checked> Tell me about events</label>
+    <label class="consent"><input type="checkbox" name="tag-club" form="signup"> I'm interested in the wine club</label>
+    <p class="form-msg" id="form-msg" role="status"></p>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="split reveal">
+    <div>
+      <p class="eyebrow">Visit</p>
+      <h2>Find us in the Village</h2>
+      <address>
+        312 Capitola Avenue<br>
+        Capitola, CA 95010
+      </address>
+      <table class="hours" id="hours-table"></table>
+      <p class="fine">Hours can change for holidays and private events. Check Instagram or call ahead.</p>
+      <div class="hero-cta">
+        <a class="btn" href="https://maps.google.com/?q=312+Capitola+Ave,+Capitola,+CA" target="_blank" rel="noopener">Directions</a>
+        <a class="btn btn-ghost-dark" href="tel:+10000000000">Call Us</a>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Map to Cocoa Vino" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=312+Capitola+Ave,+Capitola,+CA&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <a class="brand" href="#top">Cocoa <span>Vino</span></a>
+  <nav>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+    <a href="#newsletter">Newsletter</a>
+  </nav>
+  <p class="fine">Must be 21+ to purchase or consume alcohol. Please enjoy responsibly.<br>© <span id="year"></span> Cocoa Vino, Capitola</p>
+</footer>
+
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
