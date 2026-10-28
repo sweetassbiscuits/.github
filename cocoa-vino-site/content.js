@@ -23,11 +23,11 @@ window.SITE = {
 
   // Scrolling "Now pouring" banner
   nowPouring: [
-    "Vintage Champagne — rotating",
-    "Santa Cruz Mountains Pinot Noir",
-    "Paso Robles Rhône blend",
-    "Napa Cabernet, library vintage",
-    "Live music Fridays",
+    "Rotating vintage Champagne",
+    "Napa Valley Cabernet",
+    "Paso Robles reds",
+    "Weekend mimosas & live music",
+    "By the glass or bottle",
   ],
 
   // Menu cards. type: red | white | bubbles | flight   (SAMPLE)

@@ -123,6 +123,15 @@ a { color: inherit; }
 .event-img { width: 160px; aspect-ratio: 1; object-fit: cover; border-radius: 12px; }
 .empty { text-align: center; opacity: .7; }
 
+/* About */
+.about-photo img { width: 100%; display: block; border-radius: 20px; border: 1px solid rgba(201, 163, 92, .35);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .45); }
+.about-photo { position: relative; }
+.about-photo::after { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid var(--gold); border-radius: 20px; z-index: -1; }
+#about { isolation: isolate; }
+#about p:not(.eyebrow) { color: rgba(248, 241, 231, .82); }
+#about .about-sign { font: italic 500 1.5rem var(--serif); color: var(--gold-2); }
+
 /* Split / club */
 .split { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .perks { padding: 0; list-style: none; margin: 1.5rem 0 2rem; }
