@@ -6,18 +6,27 @@ A new, dynamic site for Cocoa Vino (312 Capitola Ave, Capitola, CA). It's plain 
 - **Live "Open now / Closed" badge** and today's hours highlighted
 - **"Now pouring" ticker** that scrolls continuously
 - **Filterable menu** (Reds / Whites / Bubbles / Flights)
-- **Events list** that hides past events on its own
+- **Events list** with all upcoming events from the current site: filters (Live Music, Bingo & Trivia, Paint & Classes), "Show more", a "Tonight" tag, and **+ Calendar** buttons that download the event for Apple, Google or Outlook calendars. Past events hide on their own.
+- **Closed days** (Thanksgiving, Christmas, private events) show as notices, and the "Open now" badge says "Closed today" on those dates
+- **Mobile quick-action bar**: Events, Directions, Call and Join List, pinned to the bottom of phones
+- **Google-friendly**: structured data so the bar and its events can show up in Google search
 - **Newsletter signup** with validation and interest tags
 - Scroll animations, a sticky nav and a mobile menu
 
 ## Updating content
 Edit **`content.js`**. It holds the hours, menu, events and ticker text. Anything marked SAMPLE is placeholder content to replace with real items.
 
+## Privacy & security
+- No analytics or ad trackers. Google Maps only loads when a visitor taps the map.
+- Newsletter form: privacy note, spam-bot trap, and a plain-English `privacy.html` page.
+- Content Security Policy blocks any script that isn't the site's own. Links from `content.js` must start with `https://`.
+- `_headers` adds HTTPS-only and anti-framing headers on Netlify or Cloudflare Pages.
+- Only Google Fonts is loaded from outside. Self-host the fonts to remove that last outside request.
+
 ## Before launch (placeholders to replace)
 - [ ] Confirm the hours (public listings say 3–10pm daily)
-- [ ] Real phone number (`tel:` link in `index.html`)
-- [ ] Instagram / Facebook URLs (footer)
-- [ ] Real menu, prices and events in `content.js`
+- [ ] Phone, Instagram, Facebook and reservations link: fill them in at the top of `content.js` (their buttons stay hidden until then)
+- [ ] Real menu and prices in `content.js`; confirm whether there is a wine club
 - [ ] Photos: save a bar photo as `images/hero.jpg` and it shows behind the headline automatically
 - [ ] Logo: `images/logo-mark.svg` is a drawn stand-in for the bottle-and-glass mark; swap in the real file
 - [ ] Connect the newsletter (below)

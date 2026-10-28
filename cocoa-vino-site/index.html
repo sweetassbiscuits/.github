@@ -3,6 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Security: only load code from this site; fonts from Google; map iframe only after a click -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https:; form-action 'self' https:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0a0f1f">
+  <meta property="og:title" content="Cocoa Vino · Wine Bar · Capitola Village">
+  <meta property="og:description" content="Rare California wines, vintage Champagne, and live music, bingo and trivia nights in Capitola Village.">
+  <meta property="og:image" content="images/bar.jpg">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
   <title>Cocoa Vino · Wine Bar · Capitola Village</title>
   <meta name="description" content="A wine bar in Capitola Village pouring rare California wines and rotating vintage champagne, with live music, bingo and trivia nights.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +19,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav" id="top">
   <a class="brand" href="#top"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
@@ -20,12 +29,13 @@
     <a href="#pours">On the Menu</a>
     <a href="#events">Events</a>
     <a href="#club">Wine Club</a>
-    <a href="#visit">Reservations</a>
     <a href="#visit">Visit</a>
+    <a href="#" data-reserve hidden>Reservations</a>
     <a class="btn btn-small" href="#newsletter">Join the List</a>
   </nav>
 </header>
 
+<main id="main">
 <section class="hero">
   <div class="hero-inner reveal">
     <img class="hero-mark" src="images/logo-mark.svg" alt="">
@@ -46,7 +56,7 @@
 
 <section id="about" class="section section-dark">
   <div class="split reveal">
-    <div class="about-photo"><img src="images/about.jpg" alt="A glass of red wine at the Cocoa Vino bar" loading="lazy"></div>
+    <div class="about-photo"><img src="images/bar.jpg" alt="A glass of red wine on the bar in front of Cocoa Vino's wine wall" loading="lazy"></div>
     <div>
       <p class="eyebrow">Sip & Savor</p>
       <h2>Refined, yet inviting</h2>
@@ -80,7 +90,14 @@
     <h2>Upcoming events</h2>
     <p>Live music, bingo, trivia and more. Newsletter subscribers hear about new events first.</p>
   </div>
+  <div class="filters" id="event-filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="music">Live Music</button>
+    <button class="chip" data-filter="games">Bingo & Trivia</button>
+    <button class="chip" data-filter="classes">Paint & Classes</button>
+  </div>
   <div class="events" id="event-list"></div>
+  <div class="more-wrap"><button class="btn btn-ghost" id="more-events" hidden>Show more events</button></div>
 </section>
 
 <section id="club" class="section">
@@ -111,12 +128,15 @@
     <p>One email a month or so. Early event tickets, new bottles, and the occasional members-only invite.</p>
     <form id="signup" class="signup" novalidate>
       <label class="sr-only" for="email">Email address</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+      <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" maxlength="254" inputmode="email">
+      <!-- Spam trap: hidden from people, bots fill it in -->
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn" type="submit">Subscribe</button>
     </form>
     <label class="consent"><input type="checkbox" name="tag-events" form="signup" checked> Tell me about events</label>
     <label class="consent"><input type="checkbox" name="tag-club" form="signup"> I'm interested in the wine club</label>
     <p class="form-msg" id="form-msg" role="status"></p>
+    <p class="privacy-note">We only use your email to send the newsletter. Never sold or shared; unsubscribe any time. <a href="privacy.html">Privacy</a></p>
   </div>
 </section>
 
@@ -133,22 +153,37 @@
       <p class="fine">Hours can change for holidays and private events. Check Instagram or call ahead.</p>
       <div class="hero-cta">
         <a class="btn" href="https://maps.google.com/?q=312+Capitola+Ave,+Capitola,+CA" target="_blank" rel="noopener">Directions</a>
-        <a class="btn btn-ghost-dark" href="tel:+10000000000">Call Us</a>
+        <a class="btn btn-ghost-dark" data-phone hidden>Call Us</a>
       </div>
     </div>
-    <div class="map">
-      <iframe title="Map to Cocoa Vino" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=312+Capitola+Ave,+Capitola,+CA&output=embed"></iframe>
+    <!-- Privacy: Google Maps (and its cookies) only loads if the visitor asks for it -->
+    <div class="map" id="map">
+      <button class="map-load" type="button">
+        <span class="map-pin" aria-hidden="true">📍</span>
+        <strong>312 Capitola Ave</strong>
+        <span>Tap to load the map</span>
+        <small>Loads Google Maps</small>
+      </button>
     </div>
   </div>
 </section>
 
+</main>
+
+<nav class="action-bar" aria-label="Quick actions">
+  <a href="#events">Events</a>
+  <a href="https://maps.google.com/?q=312+Capitola+Ave,+Capitola,+CA" target="_blank" rel="noopener">Directions</a>
+  <a data-phone hidden>Call</a>
+  <a href="#newsletter" class="primary">Join List</a>
+</nav>
+
 <footer class="footer">
   <a class="brand" href="#top"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
   <nav>
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+    <a data-social="instagram" target="_blank" rel="noopener" hidden>Instagram</a>
+    <a data-social="facebook" target="_blank" rel="noopener" hidden>Facebook</a>
     <a href="#newsletter">Newsletter</a>
+    <a href="privacy.html">Privacy</a>
   </nav>
   <p class="fine">Must be 21+ to purchase or consume alcohol. Please enjoy responsibly.<br>© <span id="year"></span> Cocoa Vino, Capitola</p>
 </footer>
