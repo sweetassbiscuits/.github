@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 64" fill="none" stroke="#e2c27e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <!-- bottle -->
+  <path d="M10 4h6v12c0 3 5 6 5 12v30a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V28c0-6 5-9 5-12z" fill="#e2c27e" fill-opacity=".12"/>
+  <path d="M9 4h8"/>
+  <rect x="7.5" y="34" width="11" height="12" rx="1" stroke-width="1.4"/>
+  <!-- glass -->
+  <path d="M26 36h11c0 7-2.5 11-5.5 11S26 43 26 36z" fill="#e2c27e" fill-opacity=".12"/>
+  <path d="M26.6 40h9.8" stroke-width="1.2"/>
+  <path d="M31.5 47v12M27.5 60h8"/>
+</svg>

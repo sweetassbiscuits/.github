@@ -18,7 +18,8 @@ Edit **`content.js`**. It holds the hours, menu, events and ticker text. Anythin
 - [ ] Real phone number (`tel:` link in `index.html`)
 - [ ] Instagram / Facebook URLs (footer)
 - [ ] Real menu, prices and events in `content.js`
-- [ ] Photos: add `images/hero.jpg` and use it in `.hero` in `styles.css`
+- [ ] Photos: save a bar photo as `images/hero.jpg` and it shows behind the headline automatically
+- [ ] Logo: `images/logo-mark.svg` is a drawn stand-in for the bottle-and-glass mark; swap in the real file
 - [ ] Connect the newsletter (below)
 
 ## Connecting the newsletter
