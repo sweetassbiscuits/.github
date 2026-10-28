@@ -24,7 +24,7 @@
 
   // Menu cards + filter
   const cards = $("#menu-cards");
-  const label = { red: "Red", white: "White", bubbles: "Bubbles", pairing: "Pairing" };
+  const label = { red: "Red", white: "White", bubbles: "Bubbles", flight: "Flight" };
   function renderMenu(filter) {
     cards.innerHTML = S.menu
       .filter((m) => filter === "all" || m.type === filter)

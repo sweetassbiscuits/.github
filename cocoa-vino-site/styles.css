@@ -101,7 +101,7 @@ a { color: inherit; }
 .card-red { border-top-color: var(--gold); }
 .card-white { border-top-color: #d9c27a; }
 .card-bubbles { border-top-color: var(--gold); }
-.card-pairing { border-top-color: var(--cocoa-2); }
+.card-flight { border-top-color: var(--cocoa-2); }
 .card .tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
 .card .region { color: var(--wine); font-weight: 500; margin-top: -.4rem; }
 .card .price { font: 600 1.3rem var(--serif); margin: 1rem 0 0; }

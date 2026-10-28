@@ -5,7 +5,7 @@ A new, dynamic site for Cocoa Vino (312 Capitola Ave, Capitola, CA). It's plain 
 ## What's dynamic
 - **Live "Open now / Closed" badge** and today's hours highlighted
 - **"Now pouring" ticker** that scrolls continuously
-- **Filterable menu** (Reds / Whites / Bubbles / Chocolate Pairings)
+- **Filterable menu** (Reds / Whites / Bubbles / Flights)
 - **Events list** that hides past events on its own
 - **Newsletter signup** with validation and interest tags
 - Scroll animations, a sticky nav and a mobile menu

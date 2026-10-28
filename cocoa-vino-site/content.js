@@ -27,19 +27,19 @@ window.SITE = {
     "Santa Cruz Mountains Pinot Noir",
     "Paso Robles Rhône blend",
     "Napa Cabernet, library vintage",
-    "Dark chocolate & Zinfandel flight",
+    "Live music Fridays",
   ],
 
-  // Menu cards. type: red | white | bubbles | pairing   (SAMPLE)
+  // Menu cards. type: red | white | bubbles | flight   (SAMPLE)
   menu: [
     { type: "bubbles", name: "Vintage Champagne", region: "Rotating selection", note: "Our signature: a different vintage bottle open every week.", price: "Glass MP" },
     { type: "red", name: "Santa Cruz Mountains Pinot Noir", region: "Santa Cruz Mountains", note: "Bright cherry, forest floor, a whisper of spice.", price: "$18" },
     { type: "red", name: "Library Cabernet", region: "Napa Valley", note: "Hard-to-find older vintage, poured by the ounce.", price: "$24" },
     { type: "white", name: "Chardonnay", region: "Sonoma Coast", note: "Coastal, mineral, restrained oak.", price: "$15" },
     { type: "white", name: "Albariño", region: "Central Coast", note: "Salty, citrusy, made for a beach afternoon.", price: "$14" },
-    { type: "pairing", name: "The Classic Flight", region: "3 wines · 3 chocolates", note: "Our savant's favorite pairings, explained as you taste.", price: "$32" },
-    { type: "pairing", name: "Bubbles & Truffles", region: "2 sparklings · 4 truffles", note: "Champagne with salted caramel, raspberry and more.", price: "$36" },
-    { type: "pairing", name: "Dark Side Flight", region: "3 bold reds · 3 dark chocolates", note: "72%–90% cacao with Zin, Syrah and Cab.", price: "$34" },
+    { type: "flight", name: "California Classics", region: "3 tastes", note: "A tour of the state: coast, mountains and valley.", price: "$28" },
+    { type: "flight", name: "Bubbles Flight", region: "3 sparklings", note: "Vintage Champagne alongside two California sparklers.", price: "$36" },
+    { type: "flight", name: "Big Reds Flight", region: "3 tastes", note: "Zinfandel, Syrah and Cabernet from small producers.", price: "$32" },
   ],
 
   // Events. date: YYYY-MM-DD. Past events hide automatically.
@@ -47,7 +47,7 @@ window.SITE = {
   // From the current site, Oct 2026. Add next dates for the recurring nights.
   events: [
     { date: "2026-10-28", time: "Evening", title: "Wednesday Night Bingo", badge: "Multiple Dates",
-      text: "Beneficiary of the night: 2B-RAD. An evening of wine, community and a little friendly competition, where great wine meets great company.", image: "", link: "" },
+      text: "Beneficiary of the night: 2B-RAD. An evening of wine, community and a little friendly competition, where great wine meets great company.", image: "images/bingo.jpg", link: "" },
     { date: "2026-10-30", time: "Evening", title: "Live Music: Brett Fowler", badge: "Live Music",
       text: "Singer and guitarist from the SC County music scene for over 10 years. Hits from the 70s, 80s, 90s and more. Everyone always enjoys!", image: "", link: "" },
     { date: "2026-11-04", time: "Evening", title: "Wednesday Night Trivia", badge: "Multiple Dates",
