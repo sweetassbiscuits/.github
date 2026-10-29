@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https:; form-action 'self' https:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0a0f1f">
+  <title>Wine & Chocolate | Cocoa Vino, Capitola Village</title>
+  <meta name="description" content="Vintage Champagne, rare California, French and Tuscan wines by the glass and bottle, plus artisan chocolate and charcuterie at Cocoa Vino in Capitola Village.">
+  <meta property="og:title" content="Wine & Chocolate | Cocoa Vino, Capitola Village">
+  <meta property="og:description" content="Vintage Champagne, rare California, French and Tuscan wines by the glass and bottle, plus artisan chocolate and charcuterie at Cocoa Vino in Capitola Village.">
+  <meta property="og:image" content="images/patio.jpg">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="wine">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav nav-solid" id="top">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="whats-on.html">What's On</a>
+    <a href="wine.html" aria-current="page">Wine & Chocolate</a>
+    <a href="private-events.html">Private Events</a>
+    <a href="visit.html">Visit</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="page-head page-head-photo">
+  <h1>Wine & Chocolate</h1>
+  <p>Order by the glass or the bottle, then ask what goes with it.</p>
+</section>
+
+<section class="section">
+  <div class="program" id="program"></div>
+</section>
+
+<section class="section section-dark" id="list-section" hidden>
+  <div class="section-head"><h2>By the glass & bottle</h2></div>
+  <table class="wine-list" id="wine-list"></table>
+</section>
+
+<section class="section section-dark">
+  <div class="split">
+    <div>
+      <h2>Chocolate</h2>
+      <p id="choc-text"></p>
+      <h2>Cheese & charcuterie</h2>
+      <p id="char-text"></p>
+    </div>
+    <div class="about-photo"><img src="images/interior.jpg" alt="Navy velvet banquette with gold pillows beneath the Cocoa Vino sign" loading="lazy"></div>
+  </div>
+</section>
+</main>
+
+<nav class="action-bar" aria-label="Quick actions">
+  <a href="index.html#this-week">Tonight</a>
+  <a href="visit.html#hours">Hours</a>
+  <a data-reserve href="visit.html#reserve">Reserve</a>
+  <a data-phone class="primary" hidden>Call</a>
+</nav>
+
+<footer class="footer">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <p>312 Capitola Ave, Capitola Village · <a data-phone data-phone-text hidden></a></p>
+  <nav aria-label="Footer">
+    <a href="visit.html#hours">Hours</a>
+    <a href="whats-on.html">What's On</a>
+    <a data-social="instagram" target="_blank" rel="noopener" hidden>Instagram</a>
+    <a data-social="facebook" target="_blank" rel="noopener" hidden>Facebook</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <p class="fine">You must be 21 or older to buy or drink alcohol. © <span id="year"></span> Cocoa Vino, Capitola</p>
+</footer>
+
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

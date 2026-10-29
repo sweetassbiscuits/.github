@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https:; form-action 'self' https:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0a0f1f">
+  <title>What's On | Cocoa Vino, Capitola Village</title>
+  <meta name="description" content="Live music Friday to Sunday, DJ Thursdays, charity bingo and trivia Wednesdays, paint parties and classes Mondays at Cocoa Vino in Capitola Village.">
+  <meta property="og:title" content="What's On | Cocoa Vino, Capitola Village">
+  <meta property="og:description" content="Live music Friday to Sunday, DJ Thursdays, charity bingo and trivia Wednesdays, paint parties and classes Mondays at Cocoa Vino in Capitola Village.">
+  <meta property="og:image" content="images/patio.jpg">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="whats-on">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav nav-solid" id="top">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="whats-on.html" aria-current="page">What's On</a>
+    <a href="wine.html">Wine & Chocolate</a>
+    <a href="private-events.html">Private Events</a>
+    <a href="visit.html">Visit</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <h1>What's On</h1>
+  <p>Every event at Cocoa Vino, soonest first. Tap any event for tickets or to RSVP.</p>
+</section>
+
+<section id="events" class="section section-dark">
+  <div class="filters" id="event-filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="music">Live Music & DJ</button>
+    <button class="chip" data-filter="games">Bingo & Trivia</button>
+    <button class="chip" data-filter="classes">Paint & Classes</button>
+  </div>
+  <div class="events" id="event-list"></div>
+</section>
+
+<section id="newsletter" class="section section-cocoa">
+  <div class="newsletter reveal">
+    <h2>Get the week's lineup before the village does.</h2>
+    <p>One short email: who's playing, which cause bingo is raising money for, and the Champagne we just opened.</p>
+    <form id="signup" class="signup" novalidate>
+      <label class="sr-only" for="email">Email address</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" maxlength="254" inputmode="email">
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send me the lineup</button>
+    </form>
+    <p class="form-msg" id="form-msg" role="status"></p>
+    <p class="privacy-note">We only use your email for this newsletter. We never sell or share it, and you can unsubscribe any time. <a href="privacy.html">Privacy</a></p>
+  </div>
+</section>
+</main>
+
+<nav class="action-bar" aria-label="Quick actions">
+  <a href="index.html#this-week">Tonight</a>
+  <a href="visit.html#hours">Hours</a>
+  <a data-reserve href="visit.html#reserve">Reserve</a>
+  <a data-phone class="primary" hidden>Call</a>
+</nav>
+
+<footer class="footer">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <p>312 Capitola Ave, Capitola Village · <a data-phone data-phone-text hidden></a></p>
+  <nav aria-label="Footer">
+    <a href="visit.html#hours">Hours</a>
+    <a href="whats-on.html">What's On</a>
+    <a data-social="instagram" target="_blank" rel="noopener" hidden>Instagram</a>
+    <a data-social="facebook" target="_blank" rel="noopener" hidden>Facebook</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <p class="fine">You must be 21 or older to buy or drink alcohol. © <span id="year"></span> Cocoa Vino, Capitola</p>
+</footer>
+
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

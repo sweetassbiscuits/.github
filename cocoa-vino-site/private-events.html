@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https:; form-action 'self' https:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0a0f1f">
+  <title>Private Events | Cocoa Vino, Capitola Village</title>
+  <meta name="description" content="Book Cocoa Vino or the fire pit patio for birthdays, rehearsal dinners, team nights and full buyouts in Capitola Village.">
+  <meta property="og:title" content="Private Events | Cocoa Vino, Capitola Village">
+  <meta property="og:description" content="Book Cocoa Vino or the fire pit patio for birthdays, rehearsal dinners, team nights and full buyouts in Capitola Village.">
+  <meta property="og:image" content="images/patio.jpg">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="private-events">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav nav-solid" id="top">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="whats-on.html">What's On</a>
+    <a href="wine.html">Wine & Chocolate</a>
+    <a href="private-events.html" aria-current="page">Private Events</a>
+    <a href="visit.html">Visit</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="page-head page-head-patio">
+  <h1>Private Events</h1>
+  <p>Birthdays, rehearsal dinners, team nights or the whole bar. Tell us what you're planning.</p>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div>
+      <h2>Ways to book</h2>
+      <ul class="perks">
+        <li><strong>The patio.</strong> The fire table and the benches around it, for a party in the open air.</li>
+        <li><strong>A full buyout.</strong> The bar, the patio and the wine wall, just for your guests.</li>
+        <li><strong>Birthdays & celebrations.</strong> Start the night with a bottle of vintage Champagne.</li>
+        <li><strong>Corporate & team nights.</strong> A paint party or a trivia round of your own.</li>
+      </ul>
+      <p>Prefer to talk? <a data-phone data-phone-text hidden></a></p>
+    </div>
+    <form class="event-form" id="event-form" novalidate>
+      <h2>Request a date</h2>
+      <label>Your name<input name="name" required autocomplete="name" maxlength="100"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email" maxlength="254"></label>
+      <label>Phone<input name="phone" type="tel" autocomplete="tel" maxlength="30"></label>
+      <div class="row">
+        <label>Date<input name="date" type="date" required></label>
+        <label>Guests<input name="guests" type="number" min="2" max="200" required></label>
+      </div>
+      <label>Type of event
+        <select name="type">
+          <option>Patio party</option><option>Full buyout</option><option>Birthday or celebration</option><option>Corporate or team night</option><option>Something else</option>
+        </select>
+      </label>
+      <label>Anything else?<textarea name="notes" rows="4" maxlength="1500"></textarea></label>
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send request</button>
+      <p class="form-msg" id="event-msg" role="status"></p>
+      <p class="privacy-note">We only use these details to plan your event. <a href="privacy.html">Privacy</a></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<nav class="action-bar" aria-label="Quick actions">
+  <a href="index.html#this-week">Tonight</a>
+  <a href="visit.html#hours">Hours</a>
+  <a data-reserve href="visit.html#reserve">Reserve</a>
+  <a data-phone class="primary" hidden>Call</a>
+</nav>
+
+<footer class="footer">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <p>312 Capitola Ave, Capitola Village · <a data-phone data-phone-text hidden></a></p>
+  <nav aria-label="Footer">
+    <a href="visit.html#hours">Hours</a>
+    <a href="whats-on.html">What's On</a>
+    <a data-social="instagram" target="_blank" rel="noopener" hidden>Instagram</a>
+    <a data-social="facebook" target="_blank" rel="noopener" hidden>Facebook</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <p class="fine">You must be 21 or older to buy or drink alcohol. © <span id="year"></span> Cocoa Vino, Capitola</p>
+</footer>
+
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

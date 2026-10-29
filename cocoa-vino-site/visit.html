@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self' https:; form-action 'self' https:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0a0f1f">
+  <title>Visit | Cocoa Vino, 312 Capitola Ave, Capitola Village</title>
+  <meta name="description" content="Cocoa Vino is at 312 Capitola Ave in Capitola Village, a short walk from the beach. Hours, parking, walk-ins and reservations.">
+  <meta property="og:title" content="Visit | Cocoa Vino, 312 Capitola Ave, Capitola Village">
+  <meta property="og:description" content="Cocoa Vino is at 312 Capitola Ave in Capitola Village, a short walk from the beach. Hours, parking, walk-ins and reservations.">
+  <meta property="og:image" content="images/patio.jpg">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="visit">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav nav-solid" id="top">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="whats-on.html">What's On</a>
+    <a href="wine.html">Wine & Chocolate</a>
+    <a href="private-events.html">Private Events</a>
+    <a href="visit.html" aria-current="page">Visit</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <h1>Visit</h1>
+  <p>312 Capitola Ave, in the middle of Capitola Village and a short walk up from the beach.</p>
+</section>
+
+<section class="section">
+  <div class="split">
+    <div>
+      <h2 id="hours">Hours</h2>
+      <p class="status-line" id="open-status" aria-live="polite"></p>
+      <table class="hours" id="hours-table"></table>
+      <p>Holiday closings and private events show up on <a href="whats-on.html">What's On</a>.</p>
+
+      <h2 id="reserve">Walk in or reserve</h2>
+      <p>Walk-ins are always welcome. Bringing a group, or want the fire table? Call ahead and we'll hold it for you.</p>
+      <div class="hero-cta left">
+        <a class="btn" data-phone hidden>Call to reserve</a>
+        <a class="btn btn-ghost-dark" data-reserve-online hidden>Book online</a>
+        <a class="btn btn-ghost-dark" href="private-events.html">Plan a private event</a>
+      </div>
+
+      <h2>Parking</h2>
+      <p>Park in one of the public lots near the Village, or find street parking along Capitola Ave, then walk down to us.</p>
+      <p><a class="btn btn-ghost-dark" href="https://maps.google.com/?q=312+Capitola+Ave,+Capitola,+CA" target="_blank" rel="noopener">Get directions</a> <a class="btn btn-ghost-dark" data-social="instagram" target="_blank" rel="noopener" hidden>Instagram</a></p>
+    </div>
+    <div class="map" id="map">
+      <button class="map-load" type="button">
+        <strong>312 Capitola Ave</strong>
+        <span>Tap to load the map</span>
+        <span class="map-note">Loads Google Maps</span>
+      </button>
+    </div>
+  </div>
+</section>
+</main>
+
+<nav class="action-bar" aria-label="Quick actions">
+  <a href="index.html#this-week">Tonight</a>
+  <a href="visit.html#hours">Hours</a>
+  <a data-reserve href="visit.html#reserve">Reserve</a>
+  <a data-phone class="primary" hidden>Call</a>
+</nav>
+
+<footer class="footer">
+  <a class="brand" href="index.html"><img class="logo-mark" src="images/logo-mark.svg" alt="">Cocoa <span>Vino</span></a>
+  <p>312 Capitola Ave, Capitola Village · <a data-phone data-phone-text hidden></a></p>
+  <nav aria-label="Footer">
+    <a href="visit.html#hours">Hours</a>
+    <a href="whats-on.html">What's On</a>
+    <a data-social="instagram" target="_blank" rel="noopener" hidden>Instagram</a>
+    <a data-social="facebook" target="_blank" rel="noopener" hidden>Facebook</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <p class="fine">You must be 21 or older to buy or drink alcohol. © <span id="year"></span> Cocoa Vino, Capitola</p>
+</footer>
+
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
