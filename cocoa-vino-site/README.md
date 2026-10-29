@@ -27,7 +27,7 @@ Edit **`content.js`**. It holds the hours, menu, events and ticker text. Anythin
 - [ ] Confirm the hours (public listings say 3–10pm daily)
 - [ ] Phone, Instagram, Facebook and reservations link: fill them in at the top of `content.js` (their buttons stay hidden until then)
 - [ ] Real menu and prices in `content.js`; confirm whether there is a wine club
-- [ ] Photos: save a bar photo as `images/hero.jpg` and it shows behind the headline automatically
+- [x] Photos: real photos of the space are in `images/` (hero = wine wall, interior, patio, fire pit, exterior)
 - [ ] Logo: `images/logo-mark.svg` is a drawn stand-in for the bottle-and-glass mark; swap in the real file
 - [ ] Connect the newsletter (below)
 

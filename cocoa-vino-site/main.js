@@ -172,6 +172,17 @@
   });
   document.head.appendChild(ld);
 
+  // Gallery: tap a photo to see it large; Esc, × or tapping outside closes it
+  const box = $("#lightbox");
+  $("#space").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-full]");
+    if (!b) return;
+    const img = box.querySelector("img");
+    img.src = b.dataset.full; img.alt = b.querySelector("img").alt;
+    box.showModal();
+  });
+  box.addEventListener("click", (e) => { if (e.target === box || e.target.closest(".lightbox-close")) box.close(); });
+
   // Map: load Google Maps only when asked (keeps Google cookies off by default)
   $("#map .map-load").addEventListener("click", () => {
     $("#map").innerHTML = '<iframe title="Map to Cocoa Vino" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps?q=312+Capitola+Ave,+Capitola,+CA&output=embed"></iframe>';
