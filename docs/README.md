@@ -46,9 +46,12 @@ Almost everything lives in **`content.js`**: phone, Instagram, hours, the weekly
 
 ## Preview locally
 ```bash
-cd cocoa-vino-site && python3 -m http.server 8000
+cd docs && python3 -m http.server 8000
 ```
 Then open http://localhost:8000.
+
+## Live site
+Published with GitHub Pages from the `docs/` folder: https://sweetassbiscuits.github.io/.github/ . Every push to the published branch updates it.
 
 ## Hosting
 Netlify, Cloudflare Pages or GitHub Pages all work for free. Point `cocoavinocapitola.com` at the host when it's ready.
