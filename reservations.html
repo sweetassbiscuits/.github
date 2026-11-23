@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve a Table</title>
+  <meta name="description" content="Book a table online. Fresh Bits Daily.">
+  <style>
+    :root {
+      --bg: #fbf7f0;
+      --fg: #2b2420;
+      --muted: #6b605a;
+      --accent: #b4532a;
+      --card: #ffffff;
+      --border: #e7ddd2;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #1c1816;
+        --fg: #f3ece4;
+        --muted: #b3a79d;
+        --accent: #e07a4c;
+        --card: #272120;
+        --border: #3a322e;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #1c1816;
+      --fg: #f3ece4;
+      --muted: #b3a79d;
+      --accent: #e07a4c;
+      --card: #272120;
+      --border: #3a322e;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, main, footer {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    header { padding-top: 40px; text-align: center; }
+    h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+    .tagline { margin: 0; color: var(--muted); }
+    main { flex: 1; padding-top: 28px; padding-bottom: 40px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    #toast-booking-widget { min-height: 420px; }
+    .fallback {
+      margin-top: 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .fallback a { color: var(--accent); }
+    footer { padding-bottom: 24px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reserve a Table</h1>
+    <p class="tagline">Fresh Bits Daily</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <!-- Toast reservation widget -->
+      <div id="toast-booking-widget"></div>
+      <script
+        src="https://toast.app/scripts/widgets/reserve.js"
+        data-restaurant-guid="bd820884-9bf3-4388-b309-4b39f2186c28">
+      </script>
+    </div>
+
+    <p class="fallback">
+      Widget not loading?
+      <a href="https://tables.toasttab.com/restaurants/bd820884-9bf3-4388-b309-4b39f2186c28/findTime"
+         rel="noopener" target="_blank">Book directly on Toast</a>.
+    </p>
+  </main>
+
+  <footer>Reservations powered by Toast.</footer>
+</body>
+</html>
